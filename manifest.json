@@ -1,0 +1,21 @@
+{
+  "name": "Gozlan Jewelry Ring Sizer",
+  "short_name": "Ring Sizer",
+  "description": "A web app to help you size your finger for rings.",
+  "icons": [
+    {
+      "src": "/images/ring-sizer-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/ring-sizer-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#008080",
+  "theme_color": "#008080",
+  "display": "standalone"
+}
