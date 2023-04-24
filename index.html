@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gozlan Jewelry Ring Sizer</title>
-    <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Gozlan Jewelry Ring Sizer</h1>
-      <h2>أداة قياس الخواتم لمجوهرات جزيرة العرب</h2>
-    </header>
-    <main>
-      <div class="ring-sizer">
-        <div class="ring-circle"></div>
-      </div>
-      <div class="ring-size-chart">
-        <h3>أحجام الخواتم</h3>
-        <ul>
-          <li>مقاس 4 - قطر 14.8 مم</li>
-          <li>مقاس 5 - قطر 15.7 مم</li>
-          <li>مقاس 6 - قطر 16.5 مم</li>
-          <li>مقاس 7 - قطر 17.3 مم</li>
-          <li>مقاس 8 - قطر 18.2 مم</li>
-          <li>مقاس 9 - قطر 18.9 مم</li>
-          <li>مقاس 10 - قطر 19.8 مم</li>
-        </ul>
-      </div>
-    </main>
-    <script src="script.js"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('sw.js').then(registration => {
-            console.log('Service worker registered:', registration);
-          }).catch(error => {
-            console.log('Service worker registration failed:', error);
-          });
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gozlan Jewelry Ring Sizer</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/3e17fcdc8f.js" crossorigin="anonymous"></script>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(registration => {
+          console.log('Service worker registered:', registration);
+        }).catch(error => {
+          console.log('Service worker registration failed:', error);
         });
-      }
-    </script>
-  </body>
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Gozlan Jewelry Ring Sizer</h1>
+    <h2 class="header__subtitle">مقياس حجم الخاتم من جوزلان للمجوهرات</h2>
+  </header>
+
+  <div class="ring-sizer">
+    <div class="ring-circle"></div>
+    <div class="ring-sizes">
+      <div class="ring-size">US 5</div>
+      <div class="ring-size">US 6</div>
+      <div class="ring-size">US 7</div>
+      <div class="ring-size">US 8</div>
+      <div class="ring-size">US 9</div>
+      <div class="ring-size">US 10</div>
+      <div class="ring-size">US 11</div>
+      <div class="ring-size">US 12</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
 </html>
